@@ -18,7 +18,7 @@ export default defineConfig({
         {
           label: 'Getting Started',
           items: [
-            'getting-started/introduction',
+            'getting-started',
             'getting-started/wordpress-information',
             'getting-started/requirements',
             'getting-started/file-included',
