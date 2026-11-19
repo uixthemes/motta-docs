@@ -34,8 +34,7 @@ Pre-commit (husky + lint-staged) auto-formats and lints staged `.md` files. Do n
 ```
 src/content/docs/
 ├── index.mdx            # homepage (splash)
-├── getting-started/
-├── installation/
+├── getting-started/    # includes the merged install-theme.md page
 ├── theme-options/
 ├── elementor/
 ├── header/

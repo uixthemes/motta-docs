@@ -6,6 +6,18 @@ export default defineConfig({
   site: 'https://docs.uix.store',
   base: '/motta',
   trailingSlash: 'always',
+  // The old Installation section is now a single "Install theme" page under
+  // Getting Started. Keep the old URLs working. Keys are relative to `base`;
+  // destinations include it.
+  redirects: {
+    '/installation/download-theme/': '/motta/getting-started/install-theme/#step-1-download-theme',
+    '/installation/install-theme/': '/motta/getting-started/install-theme/#step-2-install-theme',
+    '/installation/install-plugins/':
+      '/motta/getting-started/install-theme/#step-3-install-plugins',
+    '/installation/config-plugins/':
+      '/motta/getting-started/install-theme/#step-4-configure-image-sizes',
+    '/installation/import-demo/': '/motta/getting-started/install-theme/#step-5-import-demo',
+  },
   integrations: [
     starlight({
       title: 'Motta Docs',
@@ -19,21 +31,10 @@ export default defineConfig({
           label: 'Getting Started',
           items: [
             'getting-started',
-            'getting-started/wordpress-information',
-            'getting-started/requirements',
-            'getting-started/file-included',
+            'getting-started/before-you-install',
+            'getting-started/install-theme',
             'getting-started/theme-license',
             'getting-started/support',
-          ],
-        },
-        {
-          label: 'Installation',
-          items: [
-            'installation/download-theme',
-            'installation/install-theme',
-            'installation/install-plugins',
-            'installation/config-plugins',
-            'installation/import-demo',
           ],
         },
         {
